@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
     color: '#333',
   },
   counterText: {
-    fontSize: 500,
+    fontSize: 100,
     textAlign: 'center',
 
   },
