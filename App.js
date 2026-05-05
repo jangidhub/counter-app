@@ -13,15 +13,20 @@ export default function App() {
     setcount(count - 1);
   }
   const resetCount = () => {
+
     setcount(0)
+    alert("Counter Reset")
   }
+
+
+
   return (
     <View style={styles.container}>
       <StatusBar style='auto' />
       <View style={styles.header}>
         <Text style={styles.heading}>COUNTER APP</Text>
       </View>
-      <Text style={styles.counterText}>{count}</Text>
+      <Text style={[styles.counterText, { color: count === 0 ? 'black' : count >= 1 ? 'green' : 'red' }]}>{count}</Text>
       <View style={styles.buttonsBox}>
         <TouchableOpacity style={styles.buttons} onPress={() => { increaseCount() }}>
           <Text style={{ color: '#ddd' }}>+</Text>
